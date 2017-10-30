@@ -28,7 +28,7 @@ def login():
 		user_message = "No text entered!"
 	else:
 		messageId = sendToQueue(txt)
-		user_message = "Thank you. Will say \"" + txt + "\" soon."
+		user_message = "Thank you."
 	return render_template('thankyou.html', user_message = user_message)
 
 if __name__ == "__main__":
