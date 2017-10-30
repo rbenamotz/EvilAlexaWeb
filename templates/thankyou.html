@@ -8,12 +8,7 @@
 		<div id="header">
 			<img src="{{ url_for('static', filename='logo.png') }}"/>
 		</div>
-			<form id="paper" method="POST" action="speak">
-				<input type="text" placeholder="Enter something spooky" name="txt" id="txt"></input>
-				<br/>
-				<input id="button" type="submit" value="Speak">
-		
-			</form>
-			<img src="{{ url_for('static', filename='evaila.JPG') }}" align="center"/>
+		<h2>{{ user_message }}</h2>
+		<a href="../">Speak again</a>
 	</body>
 </html>

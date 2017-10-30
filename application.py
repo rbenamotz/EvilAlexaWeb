@@ -21,12 +21,15 @@ def hello():
 
 @application.route('/speak', methods=['POST', 'GET'])
 def login():
+	user_message = ""
 	txt = request.form['txt'].strip()
 	txt = txt[:500]
 	if (not txt):
-		return "No text entered!"
-	messageId = sendToQueue(txt)
-	return "Thank you. Will say \"" + txt + "\" soon."
+		user_message = "No text entered!"
+	else:
+		messageId = sendToQueue(txt)
+		user_message = "Thank you. Will say \"" + txt + "\" soon."
+	return render_template('thankyou.html', user_message = user_message)
 
 if __name__ == "__main__":
 	application.run()
