@@ -20,7 +20,7 @@ application.debug = True
 def hello():
 	return render_template('home.html')
 
-@application.route('/speak', methods=['POST', 'GET'])
+@application.route('/speak', methods=['POST'])
 def speak():
 	user_message = ""
 	txt = request.form['txt'].strip()
@@ -32,9 +32,17 @@ def speak():
 		user_message = "Thank you."
 	return render_template('thankyou.html', user_message = user_message)
 
-@application.route("/sms", methods=['GET', 'POST'])
+@application.route("/sms", methods=['POST'])
 def hello_monkey():
-	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>Thank You</Message></Response>"
+	user_message = ""
+	txt = request.form['Body'].strip()
+	txt = txt[:500]
+	if (not txt):
+		user_message = "No text entered!"
+	else:
+		messageId = sendToQueue(txt)
+		user_message = "Thank you."
+	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>user_message</Message></Response>"
 	return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
