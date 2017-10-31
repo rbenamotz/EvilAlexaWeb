@@ -13,6 +13,14 @@ def sendToQueue(txt):
 		)
 	return response.get('MessageId')
 
+def sendMessage(txt):
+	txt = txt.strip()
+	txt = txt[:500]
+	if (not txt):
+		return "No text entered!"
+	messageId = sendToQueue(txt)
+	return "Thank you."
+
 application = Flask(__name__)
 application.debug = True
 
@@ -22,26 +30,12 @@ def hello():
 
 @application.route('/speak', methods=['POST'])
 def speak():
-	user_message = ""
-	txt = request.form['txt'].strip()
-	txt = txt[:500]
-	if (not txt):
-		user_message = "No text entered!"
-	else:
-		messageId = sendToQueue(txt)
-		user_message = "Thank you."
+	user_message = sendMessage(request.form['txt'])
 	return render_template('thankyou.html', user_message = user_message)
 
 @application.route("/sms", methods=['POST'])
 def hello_monkey():
-	user_message = ""
-	txt = request.form['Body'].strip()
-	txt = txt[:500]
-	if (not txt):
-		user_message = "No text entered!"
-	else:
-		messageId = sendToQueue(txt)
-		user_message = "Thank you."
+	user_message = sendMessage(request.form['Body'])
 	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>" + user_message + "</Message></Response>"
 	return Response(resp, mimetype='text/xml')
 
