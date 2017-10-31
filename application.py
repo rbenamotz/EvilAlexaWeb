@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import Response
 import boto3
 
 
@@ -20,7 +21,7 @@ def hello():
 	return render_template('home.html')
 
 @application.route('/speak', methods=['POST', 'GET'])
-def login():
+def speak():
 	user_message = ""
 	txt = request.form['txt'].strip()
 	txt = txt[:500]
@@ -30,6 +31,11 @@ def login():
 		messageId = sendToQueue(txt)
 		user_message = "Thank you."
 	return render_template('thankyou.html', user_message = user_message)
+
+@application.route("/sms", methods=['GET', 'POST'])
+def hello_monkey():
+	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>Thank You</Message></Response>"
+	return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
 	application.run()
