@@ -42,7 +42,7 @@ def hello_monkey():
 	else:
 		messageId = sendToQueue(txt)
 		user_message = "Thank you."
-	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>user_message</Message></Response>"
+	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>" + user_message + "</Message></Response>"
 	return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
