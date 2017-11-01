@@ -26,7 +26,13 @@ application.debug = True
 
 @application.route('/', methods=['GET'])
 def hello():
-	return render_template('home.html')
+	a = 5
+	if (a==4):
+		return "4"
+	elif (a==3):
+		return "3"
+	else:
+		return render_template('home.html')
 
 @application.route('/speak', methods=['POST'])
 def speak():

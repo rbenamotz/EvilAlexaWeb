@@ -28,3 +28,8 @@ button[type=submit] {
 	vertical-align: middle;
 	align-content: center;
 }
+
+#imgAlexa {
+	display: block;
+	margin-top: 20px;
+}

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"mes",
+				"messageId"
+			],
+			[
+				"mess",
+				"messageId"
+			],
+			[
 				"Me",
 				"messageId"
 			],
@@ -14,10 +22,6 @@
 			[
 				"ACC",
 				"ACCESS_KEY"
-			],
-			[
-				"mess",
-				"message"
 			],
 			[
 				"h",
@@ -38,10 +42,6 @@
 			[
 				"me",
 				"message_id"
-			],
-			[
-				"mes",
-				"message"
 			],
 			[
 				"queue",
@@ -181,19 +181,17 @@
 			"file": "application.py",
 			"settings":
 			{
-				"buffer_size": 1181,
+				"buffer_size": 1248,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<html>\n\t<head>\n\t\t<title>Evil Alexa</title>\n\t\t<link rel=stylesheet type=text/css href=\"{{ url_for('static', filename='style.css') }}\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\t</head>\n\t<body>\n\t\t<div id=\"header\">\n\t\t\t<img src=\"{{ url_for('static', filename='logo.png') }}\"/>\n\t\t</div>\n\t\t\t<form id=\"paper\" method=\"POST\" action=\"speak\">\n\t\t\t\t<input type=\"text\" placeholder=\"Enter something spooky\" name=\"txt\" id=\"txt\"></input>\n\t\t\t\t<br/>\n\t\t\t\t<input id=\"button\" type=\"submit\" value=\"Speak\">\n\t\t\n\t\t\t</form>\n\t\t\t<img src=\"{{ url_for('static', filename='evaila.JPG') }}\" align=\"center\"/>\n\t</body>\n</html>\n",
 			"file": "templates/home.html",
-			"file_size": 642,
-			"file_write_time": 131538485320139929,
 			"settings":
 			{
-				"buffer_size": 624,
+				"buffer_size": 627,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -219,7 +217,7 @@
 			"file": "//192.168.1.41/share/evila.py",
 			"settings":
 			{
-				"buffer_size": 3900,
+				"buffer_size": 4154,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -329,7 +327,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -507,7 +505,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -573,15 +571,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1181,
+						"buffer_size": 1248,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								788,
-								788
+								1198,
+								1198
 							]
 						],
 						"settings":
@@ -592,7 +590,7 @@
 						"translation.y": 264.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -601,15 +599,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 624,
+						"buffer_size": 627,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17,
-								42
+								582,
+								582
 							]
 						],
 						"settings":
@@ -649,7 +647,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -686,15 +684,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3900,
+						"buffer_size": 4154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1713,
-								1713
+								3632,
+								3632
 							]
 						],
 						"settings":
@@ -703,10 +701,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 330.0,
+						"translation.y": 2574.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
