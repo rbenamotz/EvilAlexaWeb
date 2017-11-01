@@ -26,13 +26,7 @@ application.debug = True
 
 @application.route('/', methods=['GET'])
 def hello():
-	a = 5
-	if (a==4):
-		return "4"
-	elif (a==3):
-		return "3"
-	else:
-		return render_template('home.html')
+	return render_template('home.html')
 
 @application.route('/speak', methods=['POST'])
 def speak():
@@ -42,7 +36,7 @@ def speak():
 @application.route("/sms", methods=['POST'])
 def hello_monkey():
 	user_message = sendMessage(request.form['Body'])
-	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>" + user_message + "</Message></Response>"
+	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response></Response>"
 	return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
