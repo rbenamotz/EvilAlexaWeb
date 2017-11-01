@@ -34,10 +34,11 @@ def speak():
 	return render_template('thankyou.html', user_message = user_message)
 
 @application.route("/sms", methods=['POST'])
-def hello_monkey():
-	user_message = sendMessage(request.form['Body'])
-	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message/></Response>"
-	return Response(resp, mimetype='text/xml')
+def sms():
+	return ""
+	#user_message = sendMessage(request.form['Body'])
+	#resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>" + user_message + "</Message></Response>"
+	#return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
 	application.run()
