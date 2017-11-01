@@ -36,7 +36,7 @@ def speak():
 @application.route("/sms", methods=['POST'])
 def hello_monkey():
 	user_message = sendMessage(request.form['Body'])
-	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response></Response>"
+	resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message/></Response>"
 	return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
