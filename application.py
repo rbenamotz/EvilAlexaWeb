@@ -35,8 +35,8 @@ def speak():
 
 @application.route("/sms", methods=['POST'])
 def sms():
+	user_message = sendMessage(request.form['Body'])
 	return ""
-	#user_message = sendMessage(request.form['Body'])
 	#resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>" + user_message + "</Message></Response>"
 	#return Response(resp, mimetype='text/xml')
 
