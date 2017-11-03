@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"marg",
+				"margin-top"
+			],
+			[
 				"mes",
 				"messageId"
 			],
@@ -181,7 +185,7 @@
 			"file": "application.py",
 			"settings":
 			{
-				"buffer_size": 1248,
+				"buffer_size": 1185,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -190,7 +194,7 @@
 			"file": "templates/home.html",
 			"settings":
 			{
-				"buffer_size": 627,
+				"buffer_size": 738,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -208,42 +212,8 @@
 			"file": "static/style.css",
 			"settings":
 			{
-				"buffer_size": 1156,
+				"buffer_size": 1207,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "//192.168.1.41/share/evila.py",
-			"settings":
-			{
-				"buffer_size": 4154,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "//192.168.1.41/share/GetFromQueue.py",
-			"settings":
-			{
-				"buffer_size": 1273,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "//192.168.1.41/share/zap3.py",
-			"settings":
-			{
-				"buffer_size": 1704,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": ".elasticbeanstalk/config.yml",
-			"settings":
-			{
-				"buffer_size": 395,
 				"line_ending": "Windows"
 			}
 		}
@@ -289,9 +259,16 @@
 	},
 	"file_history":
 	[
+		"//192.168.1.41/share/evila.py",
+		"//192.168.1.41/share/web/webserver.py",
+		"//192.168.1.22/home assistant/secrets.yaml",
+		"//192.168.1.22/home assistant/configuration.yaml",
+		"//192.168.1.41/share/logs/messages.txt",
+		"/C/Users/roey/Desktop/Thank you for watching.ahk",
+		"/D/Sources/EvilAlexa/.elasticbeanstalk/config.yml",
+		"//192.168.1.41/share/zap3.py",
 		"//192.168.1.41/share/GetFromQueue.py",
 		"//192.168.1.41/share/zap4.py",
-		"//192.168.1.41/share/zap3.py",
 		"//192.168.1.41/share/zap2.py",
 		"//192.168.1.41/share/zap.py",
 		"//192.168.1.22/data/configuration.yaml",
@@ -307,7 +284,6 @@
 		"//192.168.1.22/data/known_devices.yaml",
 		"//192.168.1.22/data/pollytest.py",
 		"//192.168.1.22/samba config/smb.conf",
-		"//192.168.1.41/share/evila.py",
 		"/C/share/1.json",
 		"//192.168.1.22/data/hello_state.py",
 		"//192.168.1.22/data/zwave_device_config.yaml",
@@ -327,7 +303,7 @@
 	],
 	"find":
 	{
-		"height": 43.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -342,6 +318,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"shouldRun",
+			"green",
 			"slee",
 			"px",
 			".mp3",
@@ -467,9 +445,7 @@
 			"living roo",
 			"system",
 			"cpu",
-			"system_monitor",
-			"cpu",
-			"switch.ge_12721_lighting_control_duplex_receptacle_switch_19_0"
+			"system_monitor"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -505,7 +481,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -533,7 +509,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -571,15 +547,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1248,
+						"buffer_size": 1185,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1198,
-								1198
+								1164,
+								1175
 							]
 						],
 						"settings":
@@ -587,10 +563,10 @@
 							"syntax": "Packages/Python/Python.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 264.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -599,15 +575,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 627,
+						"buffer_size": 738,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								582,
-								582
+								720,
+								720
 							]
 						],
 						"settings":
@@ -618,7 +594,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -647,7 +623,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -656,15 +632,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1156,
+						"buffer_size": 1207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1105,
-								1105
+								1205,
+								1205
 							]
 						],
 						"settings":
@@ -675,126 +651,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "//192.168.1.41/share/evila.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3632,
-								3632
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2574.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "//192.168.1.41/share/GetFromQueue.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								58,
-								63
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "//192.168.1.41/share/zap3.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1704,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								505,
-								505
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": ".elasticbeanstalk/config.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 395,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								152,
-								152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
