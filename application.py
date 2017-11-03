@@ -3,11 +3,25 @@ from flask import render_template
 from flask import request
 from flask import Response
 import boto3
+import configparser
+
+
+
+application = Flask(__name__)
+application.debug = False
+parser = configparser.ConfigParser()
+parser.read("./config.ini")
+aws_access_key_id = parser["aws"]["aws_access_key_id"]
+aws_secret_access_key = parser["aws"]["aws_secret_access_key"]
+aws_region = parser["aws"]["defaultRegion"]
+aws_queue_url = parser["aws"]["alexa_queue_url"]
+
+
 
 
 def sendToQueue(txt):
-	sqs = boto3.resource('sqs', region_name='us-east-1')
-	queue = sqs.Queue('https://sqs.us-east-1.amazonaws.com/192158051712/EvilAlexaQueue')
+	sqs = boto3.resource('sqs', region_name=aws_region, aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+	queue = sqs.Queue(aws_queue_url)
 	response = queue.send_message(
 		MessageBody=txt,
 		)
@@ -21,8 +35,6 @@ def sendMessage(txt):
 	messageId = sendToQueue(txt)
 	return "Thank you."
 
-application = Flask(__name__)
-application.debug = False
 
 @application.route('/', methods=['GET'])
 def hello():
