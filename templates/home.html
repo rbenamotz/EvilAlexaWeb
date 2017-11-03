@@ -1,21 +1,11 @@
-<html>
-	<head>
-		<title>Evil Alexa</title>
-		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-	<body>
-		<div id="header">
-			<img src="{{ url_for('static', filename='logo.png') }}"/>
-		</div>
-			<form id="paper" method="POST" action="speak">
-				<input type="text" placeholder="Enter something spooky" name="txt" id="txt"></input>
-				<br/>
-				<input id="button" type="submit" value="Speak">
-		
-			</form>
-			Or you can simply send text message to <a href="sms://+12193019481">219.301.9481</a>
-			<img src="{{ url_for('static', filename='EvilAlexa.gif') }}" align="center"/ id="imgAlexa">
-			<hr/>
-	</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<form id="paper" method="POST" action="speak">
+	<input type="text" placeholder="Enter something spooky" name="txt" id="txt"></input>
+	<br/>
+	<input id="button" type="submit" value="Speak">
+</form>
+<div style="margin-top: 15px">
+Or you can simply send text message to <a href="sms://+12193019481">219.301.9481</a>
+</div>
+{% endblock %}
