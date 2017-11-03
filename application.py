@@ -22,7 +22,7 @@ def sendMessage(txt):
 	return "Thank you."
 
 application = Flask(__name__)
-application.debug = True
+application.debug = False
 
 @application.route('/', methods=['GET'])
 def hello():
