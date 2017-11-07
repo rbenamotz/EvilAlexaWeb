@@ -3,12 +3,13 @@ from flask import render_template
 from flask import request
 from flask import Response
 import boto3
+import os
 #import configparser
 
 
 
 application = Flask(__name__)
-application.debug = False
+application.debug = True
 #parser = configparser.ConfigParser()
 #parser.read("./config.ini")
 #aws_access_key_id = parser["aws"]["aws_access_key_id"]
