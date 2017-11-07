@@ -7,7 +7,6 @@ import os
 #import configparser
 
 
-
 application = Flask(__name__)
 application.debug = True
 #parser = configparser.ConfigParser()
@@ -58,7 +57,4 @@ def sms():
 	#return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
-	application.run(host='0.0.0.0')
-
-
-
+	application.run(debug=True, use_reloader=True)
