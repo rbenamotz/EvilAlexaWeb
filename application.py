@@ -7,8 +7,8 @@ import os
 #import configparser
 
 
-application = Flask(__name__)
-application.debug = True
+app = Flask(__name__)
+app.debug = True
 #parser = configparser.ConfigParser()
 #parser.read("./config.ini")
 #aws_access_key_id = parser["aws"]["aws_access_key_id"]
@@ -40,16 +40,16 @@ def sendMessage(txt):
 	return "Thank you."
 
 
-@application.route('/', methods=['GET'])
+@app.route('/', methods=['GET'])
 def hello():
 	return render_template('home.html')
 
-@application.route('/speak', methods=['POST'])
+@app.route('/speak', methods=['POST'])
 def speak():
 	user_message = sendMessage(request.form['txt'])
 	return render_template('thankyou.html', user_message = user_message)
 
-@application.route("/sms", methods=['POST'])
+@app.route("/sms", methods=['POST'])
 def sms():
 	user_message = sendMessage(request.form['Body'])
 	return ""
@@ -57,4 +57,4 @@ def sms():
 	#return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
-	application.run(debug=True, use_reloader=True)
+	app.run(debug=True, use_reloader=True)
