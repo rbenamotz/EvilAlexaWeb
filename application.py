@@ -16,10 +16,10 @@ application.debug = True
 #aws_secret_access_key = parser["aws"]["aws_secret_access_key"]
 #aws_region = parser["aws"]["defaultRegion"]
 #aws_queue_url = parser["aws"]["alexa_queue_url"]
-#aws_access_key_id = os.environ["aws_access_key_id"]
-#aws_secret_access_key = os.environ["aws_secret_access_key"]
-#aws_region = os.environ["defaultRegion"]
-#aws_queue_url = os.environ["alexa_queue_url"]
+aws_access_key_id = os.environ["aws_access_key_id"]
+aws_secret_access_key = os.environ["aws_secret_access_key"]
+aws_region = os.environ["defaultRegion"]
+aws_queue_url = os.environ["alexa_queue_url"]
 
 
 
@@ -43,8 +43,7 @@ def sendMessage(txt):
 
 @application.route('/', methods=['GET'])
 def hello():
-	return "hello"
-	#return render_template('home.html')
+	return render_template('home.html')
 
 @application.route('/speak', methods=['POST'])
 def speak():
