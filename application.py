@@ -43,7 +43,8 @@ def sendMessage(txt):
 
 @application.route('/', methods=['GET'])
 def hello():
-	return render_template('home.html')
+	return "hello"
+	#return render_template('home.html')
 
 @application.route('/speak', methods=['POST'])
 def speak():
