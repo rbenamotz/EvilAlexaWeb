@@ -3,18 +3,22 @@ from flask import render_template
 from flask import request
 from flask import Response
 import boto3
-import configparser
+#import configparser
 
 
 
 application = Flask(__name__)
 application.debug = False
-parser = configparser.ConfigParser()
-parser.read("./config.ini")
-aws_access_key_id = parser["aws"]["aws_access_key_id"]
-aws_secret_access_key = parser["aws"]["aws_secret_access_key"]
-aws_region = parser["aws"]["defaultRegion"]
-aws_queue_url = parser["aws"]["alexa_queue_url"]
+#parser = configparser.ConfigParser()
+#parser.read("./config.ini")
+#aws_access_key_id = parser["aws"]["aws_access_key_id"]
+#aws_secret_access_key = parser["aws"]["aws_secret_access_key"]
+#aws_region = parser["aws"]["defaultRegion"]
+#aws_queue_url = parser["aws"]["alexa_queue_url"]
+aws_access_key_id = os.environ["aws_access_key_id"]
+aws_secret_access_key = os.environ["aws_secret_access_key"]
+aws_region = os.environ["defaultRegion"]
+aws_queue_url = os.environ["alexa_queue_url"]
 
 
 
