@@ -2,19 +2,13 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import Response
+from flask import send_from_directory
 import boto3
 import os
-#import configparser
 
 
 app = Flask(__name__)
 app.debug = True
-#parser = configparser.ConfigParser()
-#parser.read("./config.ini")
-#aws_access_key_id = parser["aws"]["aws_access_key_id"]
-#aws_secret_access_key = parser["aws"]["aws_secret_access_key"]
-#aws_region = parser["aws"]["defaultRegion"]
-#aws_queue_url = parser["aws"]["alexa_queue_url"]
 aws_access_key_id = os.environ["aws_access_key_id"]
 aws_secret_access_key = os.environ["aws_secret_access_key"]
 aws_region = os.environ["defaultRegion"]
@@ -39,6 +33,11 @@ def sendMessage(txt):
 	messageId = sendToQueue(txt)
 	return "Thank you."
 
+
+
+@app.route('/favicon.ico')
+def favicon():
+	return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/', methods=['GET'])
 def hello():
