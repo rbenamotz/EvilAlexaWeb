@@ -20,9 +20,7 @@ aws_queue_url = os.environ["alexa_queue_url"]
 def sendToQueue(txt):
 	sqs = boto3.resource('sqs', region_name=aws_region, aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
 	queue = sqs.Queue(aws_queue_url)
-	response = queue.send_message(
-		MessageBody=txt,
-		)
+	response = queue.send_message(MessageBody=txt)
 	return response.get('MessageId')
 
 def sendMessage(txt):
@@ -52,8 +50,6 @@ def speak():
 def sms():
 	user_message = sendMessage(request.form['Body'])
 	return ""
-	#resp = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Response><Message>" + user_message + "</Message></Response>"
-	#return Response(resp, mimetype='text/xml')
 
 if __name__ == "__main__":
 	app.run(debug=True, use_reloader=True)
